@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   MagicalRecord: 64e7184c240087a45e9588a722eaf05b0ad837f7
-  MigrationViewController: 612eb65a081a1e7a3b525c1c93dd3e1fc57a772e
+  MigrationViewController: 2e4e9613db37373a5f77b1e06c322f4e86962860
 
 COCOAPODS: 0.19.1

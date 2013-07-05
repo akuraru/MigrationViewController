@@ -17,25 +17,24 @@
 @implementation MigrationViewController
 
 + (id)setUpWithWindow:(UIWindow *)window {
-    return [[self alloc] initWithWindow:window];
-}
-- (id)initWithWindow:(UIWindow *)w {
-    self = [super init];
-    if (self) {
-        self.window = w;
-        self.root = w.rootViewController;
-        w.rootViewController = self;
-    }
-    return self;
+    id this = [[self alloc] init];
+    [this setWindow:window];
+    return this;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)setWindow:(UIWindow *)window {
+    _window = window;
+    self.root = window.rootViewController;
+    window.rootViewController = self;
+}
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     static dispatch_once_t onceToken = 0;
     dispatch_once(&onceToken, ^{
         [self setup];
-
+        
         if (self.complete) {
             self.complete();
         }
@@ -69,9 +68,18 @@
 
 - (void)setupWithMigration {
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:[self storeName]];
+    if (self.migrationComplete)
+        self.migrationComplete();
 }
 
 - (void)setupCoreData {
     [MagicalRecord setupCoreDataStackWithStoreNamed:[self storeName]];
+}
+- (void)dealloc {
+    self.complete = nil;
+    self.storeName = nil;
+    self.window = nil;
+    self.root = nil;
+    [super dealloc];
 }
 @end

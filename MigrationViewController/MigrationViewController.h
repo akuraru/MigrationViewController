@@ -13,9 +13,10 @@ typedef void (^t_func)();
 @interface MigrationViewController : UIViewController
 
 @property (nonatomic, strong) t_func complete;
+@property (nonatomic, strong) t_func migrationComplete;
 @property (nonatomic, strong) NSString *storeName;
 
-- (id)initWithWindow:(UIWindow *)window;
+- (void)setWindow:(UIWindow *)window;
 + (instancetype)setUpWithWindow:(UIWindow *)window;
 
 @end
