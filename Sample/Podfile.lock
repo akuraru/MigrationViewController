@@ -1,10 +1,17 @@
 PODS:
   - MagicalRecord (2.1)
+  - MigrationViewController (0.0.1):
+    - MagicalRecord
 
 DEPENDENCIES:
-  - MagicalRecord
+  - MigrationViewController (from `https://raw.github.com/akuraru/MigrationViewController/master/MigrationViewController.podspec`)
+
+EXTERNAL SOURCES:
+  MigrationViewController:
+    :podspec: https://raw.github.com/akuraru/MigrationViewController/master/MigrationViewController.podspec
 
 SPEC CHECKSUMS:
   MagicalRecord: 64e7184c240087a45e9588a722eaf05b0ad837f7
+  MigrationViewController: 612eb65a081a1e7a3b525c1c93dd3e1fc57a772e
 
 COCOAPODS: 0.19.1

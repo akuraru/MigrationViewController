@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		82CF9DA0B0B9456A989787A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECC5015D6524EA5851AFD9D /* libPods.a */; };
 		BE07E065178666AE00CDD1C6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07E064178666AE00CDD1C6 /* MainViewController.m */; };
-		BE07E067178666D200CDD1C6 /* MigrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07E066178666D200CDD1C6 /* MigrationViewController.m */; };
 		BE07E06C17866EE300CDD1C6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE07E06A17866EE300CDD1C6 /* Model.xcdatamodeld */; };
 		BE2256F2176BCABC0022DA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2256F1176BCABC0022DA33 /* UIKit.framework */; };
 		BE2256F4176BCABC0022DA33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2256F3176BCABC0022DA33 /* Foundation.framework */; };
@@ -28,8 +27,6 @@
 		A1B9C676926340D89CC53E72 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BE07E063178666AE00CDD1C6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BE07E064178666AE00CDD1C6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		BE07E066178666D200CDD1C6 /* MigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationViewController.m; sourceTree = "<group>"; };
-		BE07E068178666E000CDD1C6 /* MigrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationViewController.h; sourceTree = "<group>"; };
 		BE07E06B17866EE300CDD1C6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BE2256EE176BCABC0022DA33 /* MigrationViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MigrationViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2256F1176BCABC0022DA33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -74,7 +71,6 @@
 		BE2256E5176BCABC0022DA33 = {
 			isa = PBXGroup;
 			children = (
-				BE225714176BCB760022DA33 /* MigrationViewController */,
 				BE2256F7176BCABC0022DA33 /* MigrationViewControllerSample */,
 				BE2256F0176BCABC0022DA33 /* Frameworks */,
 				BE2256EF176BCABC0022DA33 /* Products */,
@@ -128,16 +124,6 @@
 				BE225707176BCABD0022DA33 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BE225714176BCB760022DA33 /* MigrationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE07E068178666E000CDD1C6 /* MigrationViewController.h */,
-				BE07E066178666D200CDD1C6 /* MigrationViewController.m */,
-			);
-			name = MigrationViewController;
-			path = ../MigrationViewController;
 			sourceTree = "<group>";
 		};
 		C87900BA02DDA03BE1CD6B37 /* Controller */ = {
@@ -251,7 +237,6 @@
 				BE2256FE176BCABC0022DA33 /* main.m in Sources */,
 				BE225702176BCABC0022DA33 /* AppDelegate.m in Sources */,
 				BE07E065178666AE00CDD1C6 /* MainViewController.m in Sources */,
-				BE07E067178666D200CDD1C6 /* MigrationViewController.m in Sources */,
 				BE07E06C17866EE300CDD1C6 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
