@@ -45,14 +45,14 @@
 }
 - (void)setup {
     ([self isRequiredMigration])?
-        [self setupWithMigration] :
-        [self setupCoreData];
+    [self setupWithMigration] :
+    [self setupCoreData];
 }
 - (id)storeName {
     return (_storeName) ?:  [MagicalRecord defaultStoreName];
 }
 - (BOOL)isRequiredMigration {
-    NSURL *storeURL =  [NSPersistentStore MR_urlForStoreName:[self storeName]];
+    NSURL *storeURL =  ([[self storeName] isKindOfClass:[NSURL class]])? (NSURL *)[self storeName] : [NSPersistentStore MR_urlForStoreName:[self storeName]];
     NSError *error = nil;
     NSDictionary *sourceMetaData = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType
                                                                                               URL:storeURL
