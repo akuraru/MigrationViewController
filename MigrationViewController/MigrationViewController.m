@@ -31,18 +31,24 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    [self performSelectorInBackground:@selector(migration) withObject:nil];
+}
+- (void)migration {
+    __weak typeof(self) this = self;
     static dispatch_once_t onceToken = 0;
     dispatch_once(&onceToken, ^{
-        [self setup];
+        [this setup];
         
-        if (self.complete) {
-            self.complete();
+        if (this.complete) {
+            this.complete();
         }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.window.rootViewController = self.root;
+            this.window.rootViewController = this.root;
         });
     });
 }
+
 - (void)setup {
     ([self isRequiredMigration])?
     [self setupWithMigration] :

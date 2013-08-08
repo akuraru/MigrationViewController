@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'MigrationViewController'
-  s.version  = '0.0.2'
+  s.version  = '0.0.3'
   s.license  = 'MIT'
   s.summary  = 'MigrationViewController'
   s.homepage = 'http://d.hatena.ne.jp/akuraru/'
