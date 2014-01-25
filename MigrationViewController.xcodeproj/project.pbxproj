@@ -34,10 +34,10 @@
 		BE2256F1176BCABC0022DA33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE2256F3176BCABC0022DA33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE2256F5176BCABC0022DA33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BE2256F9176BCABC0022DA33 /* MigrationViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MigrationViewController-Info.plist"; sourceTree = "<group>"; };
+		BE2256F9176BCABC0022DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2256FB176BCABC0022DA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE2256FD176BCABC0022DA33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE2256FF176BCABC0022DA33 /* MigrationViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MigrationViewController-Prefix.pch"; sourceTree = "<group>"; };
+		BE2256FF176BCABC0022DA33 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		BE225700176BCABC0022DA33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE225701176BCABC0022DA33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BE225703176BCABD0022DA33 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF64AA418936110006604A3 /* lib */,
-				BE2256F7176BCABC0022DA33 /* MigrationViewController */,
+				BE2256F7176BCABC0022DA33 /* Sample */,
 				BE2256F0176BCABC0022DA33 /* Frameworks */,
 				BE2256EF176BCABC0022DA33 /* Products */,
 				A1B9C676926340D89CC53E72 /* Pods.xcconfig */,
@@ -104,7 +104,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE2256F7176BCABC0022DA33 /* MigrationViewController */ = {
+		BE2256F7176BCABC0022DA33 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				BE07E06917866EAB00CDD1C6 /* Model */,
@@ -114,17 +114,17 @@
 				BE2256F8176BCABC0022DA33 /* Supporting Files */,
 				C87900BA02DDA03BE1CD6B37 /* Controller */,
 			);
-			path = MigrationViewController;
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		BE2256F8176BCABC0022DA33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				BE225715176BCF2B0022DA33 /* ExtactedID.h */,
-				BE2256F9176BCABC0022DA33 /* MigrationViewController-Info.plist */,
+				BE2256F9176BCABC0022DA33 /* Info.plist */,
 				BE2256FA176BCABC0022DA33 /* InfoPlist.strings */,
 				BE2256FD176BCABC0022DA33 /* main.m */,
-				BE2256FF176BCABC0022DA33 /* MigrationViewController-Prefix.pch */,
+				BE2256FF176BCABC0022DA33 /* Prefix.pch */,
 				BE225703176BCABD0022DA33 /* Default.png */,
 				BE225705176BCABD0022DA33 /* Default@2x.png */,
 				BE225707176BCABD0022DA33 /* Default-568h@2x.png */,
@@ -351,8 +351,8 @@
 			baseConfigurationReference = A1B9C676926340D89CC53E72 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MigrationViewController/MigrationViewController-Prefix.pch";
-				INFOPLIST_FILE = "MigrationViewController/MigrationViewController-Info.plist";
+				GCC_PREFIX_HEADER = Sample/Prefix.pch;
+				INFOPLIST_FILE = Sample/Info.plist;
 				PRODUCT_NAME = MigrationViewController;
 				WRAPPER_EXTENSION = app;
 			};
@@ -363,8 +363,8 @@
 			baseConfigurationReference = A1B9C676926340D89CC53E72 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MigrationViewController/MigrationViewController-Prefix.pch";
-				INFOPLIST_FILE = "MigrationViewController/MigrationViewController-Info.plist";
+				GCC_PREFIX_HEADER = Sample/Prefix.pch;
+				INFOPLIST_FILE = Sample/Info.plist;
 				PRODUCT_NAME = MigrationViewController;
 				WRAPPER_EXTENSION = app;
 			};

@@ -6,11 +6,12 @@
 #import "MigrationBaseViewController.h"
 
 @interface MigrationBaseViewController ()
-@property(nonatomic, strong) UIViewController *root;
-@property(nonatomic, strong) UIWindow *currentWindow;
 @end
 
-@implementation MigrationBaseViewController
+@implementation MigrationBaseViewController {
+    UIViewController *_root;
+    UIWindow *_currentWindow;
+}
 
 + (id)setUpWithWindow:(UIWindow *)window {
     id this = [[self alloc] init];
@@ -20,37 +21,39 @@
 
 - (void)setCurrentWindow:(UIWindow *)currentWindow {
     _currentWindow = currentWindow;
-    self.root = currentWindow.rootViewController;
+    _root = currentWindow.rootViewController;
     currentWindow.rootViewController = self;
+}
+
+- (UIWindow *)currentWindow {
+    return _currentWindow;
+}
+
+- (UIViewController *)root {
+    return _root;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    [self performSelectorInBackground:@selector(migration) withObject:nil];
+    [self performSelectorOnMainThread:@selector(migration) withObject:nil waitUntilDone:NO];
 }
 
 - (void)migration {
-    __weak typeof (self) this = self;
-    static dispatch_once_t onceToken = 0;
-    dispatch_once(&onceToken, ^{
-        [this setup];
+    [self setup];
 
-        if (this.complete) {
-            this.complete();
-        }
+    if (self.complete) {
+        self.complete();
+    }
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            this.currentWindow.rootViewController = this.root;
-        });
-    });
+    self.currentWindow.rootViewController = self.root;
 }
 
 - (void)setup {}
 
 - (void)dealloc {
     self.complete = nil;
-    self.currentWindow = nil;
-    self.root = nil;
+    _currentWindow = nil;
+    _root = nil;
 }
 @end
