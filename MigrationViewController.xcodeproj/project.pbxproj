@@ -20,6 +20,8 @@
 		BE225706176BCABD0022DA33 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE225705176BCABD0022DA33 /* Default@2x.png */; };
 		BE225708176BCABD0022DA33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE225707176BCABD0022DA33 /* Default-568h@2x.png */; };
 		BE22570B176BCABD0022DA33 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE225709176BCABD0022DA33 /* MainStoryboard.storyboard */; };
+		BEF64AA718936110006604A3 /* MigrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF64AA618936110006604A3 /* MigrationViewController.m */; };
+		C8790BE43EE1C0B38BE3C281 /* MigrationBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C879097FCEF60999C3EAF956 /* MigrationBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,10 @@
 		BE225707176BCABD0022DA33 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE22570A176BCABD0022DA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE225716176BCF2B0022DA33 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/ExtactedID.h; sourceTree = "<group>"; };
+		BEF64AA518936110006604A3 /* MigrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationViewController.h; sourceTree = "<group>"; };
+		BEF64AA618936110006604A3 /* MigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationViewController.m; sourceTree = "<group>"; };
+		C87903244143A69D4D0F9EFB /* MigrationBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationBaseViewController.h; sourceTree = "<group>"; };
+		C879097FCEF60999C3EAF956 /* MigrationBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,8 @@
 		BE2256E5176BCABC0022DA33 = {
 			isa = PBXGroup;
 			children = (
-				BE2256F7176BCABC0022DA33 /* MigrationViewControllerSample */,
+				BEF64AA418936110006604A3 /* lib */,
+				BE2256F7176BCABC0022DA33 /* MigrationViewController */,
 				BE2256F0176BCABC0022DA33 /* Frameworks */,
 				BE2256EF176BCABC0022DA33 /* Products */,
 				A1B9C676926340D89CC53E72 /* Pods.xcconfig */,
@@ -97,7 +104,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE2256F7176BCABC0022DA33 /* MigrationViewControllerSample */ = {
+		BE2256F7176BCABC0022DA33 /* MigrationViewController */ = {
 			isa = PBXGroup;
 			children = (
 				BE07E06917866EAB00CDD1C6 /* Model */,
@@ -107,7 +114,6 @@
 				BE2256F8176BCABC0022DA33 /* Supporting Files */,
 				C87900BA02DDA03BE1CD6B37 /* Controller */,
 			);
-			name = MigrationViewControllerSample;
 			path = MigrationViewController;
 			sourceTree = "<group>";
 		};
@@ -124,6 +130,17 @@
 				BE225707176BCABD0022DA33 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEF64AA418936110006604A3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				BEF64AA518936110006604A3 /* MigrationViewController.h */,
+				BEF64AA618936110006604A3 /* MigrationViewController.m */,
+				C879097FCEF60999C3EAF956 /* MigrationBaseViewController.m */,
+				C87903244143A69D4D0F9EFB /* MigrationBaseViewController.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		C87900BA02DDA03BE1CD6B37 /* Controller */ = {
@@ -238,6 +255,8 @@
 				BE225702176BCABC0022DA33 /* AppDelegate.m in Sources */,
 				BE07E065178666AE00CDD1C6 /* MainViewController.m in Sources */,
 				BE07E06C17866EE300CDD1C6 /* Model.xcdatamodeld in Sources */,
+				BEF64AA718936110006604A3 /* MigrationViewController.m in Sources */,
+				C8790BE43EE1C0B38BE3C281 /* MigrationBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
