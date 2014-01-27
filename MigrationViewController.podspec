@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.author   = { 'Akuraru IP' => 'akuraru@gmail.com' }
   s.source   = {
-    :git => '.git',
+    :git => 'https://github.com/akuraru/MigrationViewController.git',
     :tag => s.version.to_s
   }
   s.platform = :ios
