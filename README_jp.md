@@ -1,7 +1,7 @@
 MigrationViewController
 =======================
 
-このライブラリはCoreDataのマイグレーションを円滑に行うためのライブラリです。
+このライブラリはCoreDataのマイグレーションを円滑に行うためのものです。
 
 
 ## Installation
@@ -31,9 +31,13 @@ pod 'MigrationViewController'
 
 * Coreのみをインストール
 
-``` ruby
-pod 'MigrationViewController/Core'
-```
+	``` ruby
+	pod 'MigrationViewController/Core'
+	```
 
 * MigrationBaseViewControllerを継承したViewControllerを作成
 * setupをオーバーライドしデータベースのセットアップコードを記述する
+
+## License
+
+MIT
