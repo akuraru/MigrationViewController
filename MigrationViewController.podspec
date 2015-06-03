@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/akuraru/MigrationViewController.git',
     :tag => s.version.to_s
   }
-  s.platform = :ios
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.subspec 'Core' do |a|
