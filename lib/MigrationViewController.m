@@ -6,7 +6,7 @@
 //
 
 #import "MigrationViewController.h"
-#import <CoreData+MagicalRecord.h>
+#import <MagicalRecord.h>
 
 @interface MigrationViewController ()
 @end

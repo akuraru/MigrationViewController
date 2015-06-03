@@ -25,8 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9014CE9C0ECF113235CB0F1E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECC5015D6524EA5851AFD9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1B9C676926340D89CC53E72 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BE07E063178666AE00CDD1C6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BE07E064178666AE00CDD1C6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		BE07E06B17866EE300CDD1C6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +49,7 @@
 		BEF64AA618936110006604A3 /* MigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationViewController.m; sourceTree = "<group>"; };
 		C87903244143A69D4D0F9EFB /* MigrationBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationBaseViewController.h; sourceTree = "<group>"; };
 		C879097FCEF60999C3EAF956 /* MigrationBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationBaseViewController.m; sourceTree = "<group>"; };
+		E0C2C599562416AE5F00239C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +82,7 @@
 				BE2256F7176BCABC0022DA33 /* Sample */,
 				BE2256F0176BCABC0022DA33 /* Frameworks */,
 				BE2256EF176BCABC0022DA33 /* Products */,
-				A1B9C676926340D89CC53E72 /* Pods.xcconfig */,
+				F11E778CF7C564A02A08FC3D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +151,15 @@
 				BE07E064178666AE00CDD1C6 /* MainViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F11E778CF7C564A02A08FC3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9014CE9C0ECF113235CB0F1E /* Pods.debug.xcconfig */,
+				E0C2C599562416AE5F00239C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +238,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		28D8FAF95BEF43FF827C9ECA /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -348,7 +358,7 @@
 		};
 		BE225712176BCABD0022DA33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1B9C676926340D89CC53E72 /* Pods.xcconfig */;
+			baseConfigurationReference = 9014CE9C0ECF113235CB0F1E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sample/Prefix.pch;
@@ -360,7 +370,7 @@
 		};
 		BE225713176BCABD0022DA33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1B9C676926340D89CC53E72 /* Pods.xcconfig */;
+			baseConfigurationReference = E0C2C599562416AE5F00239C /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sample/Prefix.pch;

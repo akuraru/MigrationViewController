@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name     = 'MigrationViewController'
-  s.version  = '0.0.5'
+  s.version  = '1.0.0'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'This is CoreData migration when updating to display library'
   s.homepage = 'https://github.com/akuraru/MigrationViewController'
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '7.0'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.author   = { 'Akuraru IP' => 'akuraru@gmail.com' }
   s.source   = {
@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |a|
     a.source_files  = 'lib/MigrationBaseViewController.{h,m}'
+  s.frameworks = 'UIKit'
   end
   s.subspec 'MigrationViewController' do |a|
     a.source_files  = 'lib/MigrationViewController.{h,m}'
