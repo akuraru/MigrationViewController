@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'MigrationViewController'
-  s.version  = '1.0.0'
+  s.version  = '1.0.1'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'This is CoreData migration when updating to display library'
   s.homepage = 'https://github.com/akuraru/MigrationViewController'
