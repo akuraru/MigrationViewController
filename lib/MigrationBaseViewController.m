@@ -6,12 +6,11 @@
 #import "MigrationBaseViewController.h"
 
 @interface MigrationBaseViewController ()
+@property(strong, nonatomic) UIViewController *root;
+@property(strong, nonatomic) UIWindow *currentWindow;
 @end
 
-@implementation MigrationBaseViewController {
-    UIViewController *_root;
-    UIWindow *_currentWindow;
-}
+@implementation MigrationBaseViewController
 
 + (id)setUpWithWindow:(UIWindow *)window {
     id this = [[self alloc] init];
@@ -23,14 +22,6 @@
     _currentWindow = currentWindow;
     _root = currentWindow.rootViewController;
     currentWindow.rootViewController = self;
-}
-
-- (UIWindow *)currentWindow {
-    return _currentWindow;
-}
-
-- (UIViewController *)root {
-    return _root;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
